@@ -1,0 +1,74 @@
+$mainFont                : -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$defaultFont             : 'Segoe UI', Tahoma, Geneva, Verdana, Roboto, sans-serif;
+
+$mainFontColor           : #101010;
+$mainFontSize            : 18px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+
+// All formats include
+// @mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+//     @font-face {
+
+//         font-family: $family;
+//         src: url("#{$filePath}.eot"); // IE9 Compact Modes
+//         src: 
+//             url("#{$filePath}.woff") format("woff"), // Prety modern browsers
+//             url("#{$filePath}.woff2") format("woff2"),
+
+//             // Use for maximum compatibility
+//             url("#{$filePath}.ttf") format("truetype"), // Safari, Android, iOS
+//             url("#{$filePath}.svg") format("svg"), // Legacy iOS
+//             url("#{$filePath}.eot?#iefix") format("embedded-opentype"); // IE6-IE8
+
+//         font-weight: $weight;
+//         font-style: $style;
+//         font-display: swap;
+
+//     }
+
+// }
+
+// Only woff2 and woff
+@mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+    @font-face {
+
+        font-family: $family;
+        src: 
+            url("#{$filePath}.woff") format("woff"), // Prety modern browsers
+            url("#{$filePath}.woff2") format("woff2");
+
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+
+    }
+
+}
+
+
+// woff2, woff, ttf, eot
+// @mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+//     @font-face {
+
+//         font-family: $family;
+//         src: url("#{$filePath}.eot"); // IE9 Compact Modes
+//         src: 
+//             url("#{$filePath}.woff") format("woff"), // Prety modern browsers
+//             url("#{$filePath}.woff2") format("woff2"),
+
+//             // Use for maximum compatibility
+//             url("#{$filePath}.ttf") format("truetype"), // Safari, Android, iOS
+//             url("#{$filePath}.eot?#iefix") format("embedded-opentype"); // IE6-IE8
+
+//         font-weight: $weight;
+//         font-style: $style;
+//         font-display: swap;
+
+//     }
+
+// }

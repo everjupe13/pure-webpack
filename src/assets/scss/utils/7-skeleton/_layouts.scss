@@ -1,0 +1,51 @@
+section, .section {
+
+    position: relative;
+    
+    padding: 40px 0;
+
+}
+
+.content-wrapper {
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+}
+
+.container {
+
+    position: relative;
+    
+    width: 100%;
+    max-width: $desktopContainer;
+    margin: 0 auto;
+    
+    @include laptop {
+
+        max-width: $laptopContainer;
+
+    }
+
+    @include tablet {
+
+        max-width: $tabletContainer;
+
+    }
+
+    @include small-tablet {
+
+        max-width: $smallTabletContainer;
+
+    }
+
+    @include phone {
+
+        max-width: $phoneContainer;
+        padding: 0 15px;
+
+    }
+
+}

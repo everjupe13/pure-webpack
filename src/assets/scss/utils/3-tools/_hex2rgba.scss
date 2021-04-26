@@ -1,0 +1,5 @@
+@mixin hex2rgba($color, $alpha, $property: background-color,) {
+
+    #{$property}: rgba(red($color), green($color), blue($color), $alpha);
+
+}
